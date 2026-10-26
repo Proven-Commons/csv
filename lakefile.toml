@@ -1,0 +1,13 @@
+name = "csv"
+version = "0.1.0"
+defaultTargets = ["Csv", "Proofs", "csv"]
+
+[[lean_lib]]
+name = "Csv"
+
+[[lean_lib]]
+name = "Proofs"
+
+[[lean_exe]]
+name = "csv"
+root = "Main"
