@@ -1,7 +1,7 @@
 /-
   The CSV data model and the canonical printer, following
   RFC 4180, with the well formed predicate the round trip proof in
-  `Proofs` uses.
+  `Csv.Proofs` uses.
 
   A document is a list of records, a record is a list of fields,
   and a field is text, held as a list of characters. A header row

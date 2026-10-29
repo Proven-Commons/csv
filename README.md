@@ -54,7 +54,7 @@ Needs Linux, elan, and Python 3.11 or later.
 
 ```
 lake build
-grep -rn "sorry" --include="*.lean" Csv Proofs Main.lean Csv.lean Csv/Proofs.lean
+grep -rn "sorry" --include="*.lean" Csv Main.lean Csv.lean
 python3 tests/run_tests.py
 ```
 
