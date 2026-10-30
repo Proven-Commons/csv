@@ -2,11 +2,11 @@
 
 A CSV parser and printer in Lean, following RFC 4180. The parser reads a CSV text into a document, a list of records of fields; the printer writes a document back in one fixed canonical form, quoting a field exactly when its text holds a comma, a quote, a CR, or an LF, and ending every record with CRLF. The main claim is proved: parsing what the printer wrote returns the same document. The tests run the parser against the examples of RFC 4180, against Python's `csv` module, and against a strict Python reading of the grammar; see `tests/TEST-RESULTS.md` for the counts.
 
-Status: in progress. The specification has not yet been approved by a reviewer apart from its author, and no statement file (`Spec.lean`) has been added by a reviewer, so this is not verified.
+Status: in progress. The specification has not yet been approved by a reviewer apart from its author, and no statement file (`Csv/Spec.lean`) has been added by a reviewer, so this is not verified.
 
 ## What is proved
 
-The definitions are in `Csv/Value.lean` (the data model, the printer, and the well-formedness rule) and `Csv/Parse.lean` (the parser). The proofs are in `Proofs/RoundTrip.lean`.
+The definitions are in `Csv/Value.lean` (the data model, the printer, and the well-formedness rule) and `Csv/Parse.lean` (the parser). The proofs are in `Csv/Proofs/RoundTrip.lean`.
 
 | Claim | Theorem |
 |-------|---------|
@@ -54,7 +54,7 @@ Needs Linux, elan, and Python 3.11 or later.
 
 ```
 lake build
-grep -rn "sorry" --include="*.lean" Csv Proofs Main.lean Csv.lean Proofs.lean
+grep -rn "sorry" --include="*.lean" Csv Main.lean Csv.lean
 python3 tests/run_tests.py
 ```
 

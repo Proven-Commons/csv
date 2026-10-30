@@ -1,13 +1,14 @@
 name = "csv"
 version = "0.1.0"
 license = "Apache-2.0"
-defaultTargets = ["Csv", "Proofs", "csv"]
+defaultTargets = ["Csv", "CsvProofs", "csv"]
 
 [[lean_lib]]
 name = "Csv"
 
 [[lean_lib]]
-name = "Proofs"
+name = "CsvProofs"
+roots = ["Csv.Proofs"]
 
 [[lean_exe]]
 name = "csv"
